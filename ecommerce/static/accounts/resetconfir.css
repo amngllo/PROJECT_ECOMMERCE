@@ -1,0 +1,166 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #45a049, #a3e784);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+}
+
+/* Container utama untuk halaman reset password konfirmasi */
+.service-container-password {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    box-sizing: border-box;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animasi fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Indikator status (lingkaran) */
+.status-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.status-indicators .red {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #f44336;
+}
+
+.status-indicators .yellow {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ffeb3b;
+}
+
+.status-indicators .green {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #4caf50;
+}
+
+/* Judul untuk form reset password */
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Pesan error */
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Form dan input fields */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    box-shadow: 0 0 10px #4CAF50;
+    border-color: #4CAF50;
+}
+
+/* Tombol submit */
+.submit-btn-modal {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #4CAF50, #4CAF50);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn-modal:hover {
+    background: linear-gradient(135deg, #4CAF50, #85f189);
+    transform: translateY(-2px);
+}
+
+/* Styling untuk pesan error form */
+.messages {
+    margin-top: 10px;
+    list-style-type: none;
+    padding-left: 0;
+    color: #f44336;
+    font-size: 14px;
+}
+
+.messages .error {
+    color: #f44336;
+}
+
+/* Responsive Design untuk tampilan mobile */
+@media (max-width: 480px) {
+    .service-container-password {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .form-group input {
+        font-size: 14px;
+    }
+
+    .submit-btn-modal {
+        font-size: 14px;
+    }
+}

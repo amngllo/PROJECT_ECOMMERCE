@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang Belanja</title>
+    <link rel="stylesheet" href="{% static 'shop/style.css' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="{% url 'product_list' %}">
+                <img src="{{ MEDIA_URL }}logokp.png" alt="E-Commerce Logo" class="logo-img">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'product_list' %}">Home</a></li>
+                <li><a href="{% url 'checkout' %}">Checkout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cart-details">
+            <h2>Daftar Barang di Keranjang</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nama Produk</th>
+                        <th>Harga</th>
+                        <th>Jumlah</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in cart.items.all %}
+                        <tr>
+                            <td>{{ item.product.name }}</td>
+                            <td>Rp {{ item.product.price|floatformat:2 }}</td>
+                            <td>{{ item.quantity }}</td>
+                            <td>Rp {{ item.quantity * item.product.price|floatformat:2 }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <h3>Total Harga: Rp {{ cart.total_price|floatformat:2 }}</h3>
+            
+            <!-- Checkout button -->
+            <div class="checkout-button">
+                <a href="{% url 'checkout' %}" class="btn">Lanjutkan ke Checkout</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-section">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Services</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Affiliate Program</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Help</h4>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Shipping</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Order Status</a></li>
+                <li><a href="#">Payment Options</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">WhatsApp</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

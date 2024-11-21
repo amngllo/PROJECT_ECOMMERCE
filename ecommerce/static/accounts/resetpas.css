@@ -1,0 +1,169 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #45a049, #a3e784);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333; /* Teks gelap untuk keterbacaan */
+}
+
+/* Container untuk halaman Forgot Password */
+.forgot-password-container {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-sizing: border-box;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animasi fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Judul halaman Forgot Password */
+.forgot-password-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Subjudul untuk instruksi Forgot Password */
+.forgot-password-subtitle {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+/* Flex container untuk input dan tombol */
+.forgot-password-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Group input dengan label */
+/* Group input dengan label */
+.form-group {
+    display: flex;
+    flex-direction: row;  /* Mengatur label dan input dalam satu baris */
+    align-items: center;  /* Menyelaraskan secara vertikal ke tengah */
+    width: 100%;
+    gap: 10px;  /* Memberikan jarak antara label dan input */
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    width: 25%; /* Menentukan lebar label, bisa disesuaikan */
+    text-align: left;
+}
+
+.form-group input {
+    width: 75%; /* Menentukan lebar input, bisa disesuaikan */
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Fokus input */
+.form-group input:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+    border-color: #4CAF50;
+}
+
+
+/* Tombol submit */
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #4CAF50, #66bb6a);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #66bb6a, #4CAF50);
+    transform: translateY(-2px);
+}
+
+.submit-btn:active {
+    transform: translateY(1px);
+}
+
+/* Style untuk status indikator */
+.status-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.status-indicators span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+}
+
+.status-indicators .red {
+    background-color: #f44336;
+}
+
+.status-indicators .yellow {
+    background-color: #ffeb3b;
+}
+
+.status-indicators .green {
+    background-color: #4CAF50;
+}
+
+/* Style untuk tombol dan form pada perangkat mobile */
+@media (max-width: 480px) {
+    .forgot-password-container {
+        padding: 30px 20px;
+    }
+
+    .forgot-password-title {
+        font-size: 24px;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .form-group input {
+        width: 100%;
+    }
+
+    .submit-btn {
+        font-size: 14px;
+    }
+}

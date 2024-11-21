@@ -1,0 +1,124 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #45a049, #a3e784);
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Styling */
+.register-container {
+    background-color: #ffffff;
+    width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Title and Subtitle */
+.register-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.register-subtitle {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Error Message Styling */
+.messages {
+    margin: 10px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.error {
+    color: #2575fc;
+    font-size: 14px;
+    text-align: left;
+    margin: 5px 0;
+}
+
+.text-error {
+    color: #2575fc;
+    font-size: 14px;
+}
+
+/* Form Styling */
+.register-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 4px #4CAF50(242, 99, 34, 0.5);
+}
+
+/* Submit Button */
+.submit-btn {
+    background-color: #72e876;
+    color: #fff;
+    font-size: 16px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.submit-btn:hover {
+    background-color: #4CAF50;
+}
+
+/* Reset Password Link */
+.text-reset-password {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+.text-reset-password a {
+    color: #4CAF50;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.text-reset-password a:hover {
+    color: #4CAF50;
+}

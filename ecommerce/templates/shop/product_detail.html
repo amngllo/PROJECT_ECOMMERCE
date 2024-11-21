@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Produk</title>
+    <link rel="stylesheet" href="{% static 'shop/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="{% url 'product_list' %}">
+                <img src="{{ MEDIA_URL }}logokp.png" alt="E-Commerce Logo" class="logo-img">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'product_list' %}">Home</a></li>
+                <li><a href="{% url 'cart_detail' %}"><i class="fas fa-shopping-cart"></i> Keranjang</a></li>
+                <li><a href="{% url 'checkout' %}">Checkout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="product-detail-container">
+        <section class="product-detail">
+            <div class="product-image">
+                <img src="{{ product.image.url }}" alt="{{ product.name }}">
+            </div>
+            <div class="product-info">
+                <h2>{{ product.name }}</h2>
+                <p>{{ product.description }}</p>
+                <p class="price">Harga: Rp {{ product.price|floatformat:2 }}</p>
+                <div class="product-actions">
+                    <a href="{% url 'add_to_cart' product.id %}" class="btn">Tambah ke Keranjang</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-reviews">
+            <h3>Tambah Review</h3>
+            <form action="{% url 'add_review' product.id %}" method="post">
+                {% csrf_token %}
+                <div class="rating">
+                    <label for="rating">Rating:</label>
+                    <input type="number" id="rating" name="rating" min="1" max="5" required>
+                </div>
+                <div class="comment">
+                    <label for="comment">Komentar:</label>
+                    <textarea id="comment" name="comment" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn">Kirim Review</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-section">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Services</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Affiliate Program</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Help</h4>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Shipping</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Order Status</a></li>
+                <li><a href="#">Payment Options</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Shop</h4>
+            <ul>
+                <li><a href="#">Case</a></li>
+                <li><a href="#">Charger</a></li>
+                <li><a href="#">Bluetooth Wireless</a></li>
+                <li><a href="#">Scratch-Resistant</a></li>
+            </ul>
+        </div>
+        <div class="footer-section follow-us">
+            <h4>Follow Us</h4>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">WhatsApp</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

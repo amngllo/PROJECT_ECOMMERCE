@@ -1,0 +1,95 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #45a049, #a3e784);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+}
+
+/* Container utama untuk halaman reset password selesai */
+.service-container-password {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    box-sizing: border-box;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animasi fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Indikator status (lingkaran) */
+.status-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.status-indicators .indicator {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.status-indicators .red {
+    background-color: #f44336;
+}
+
+.status-indicators .yellow {
+    background-color: #ffeb3b;
+}
+
+.status-indicators .green {
+    background-color: #4caf50;
+}
+
+/* Konten pesan setelah reset password */
+.password-reset-content {
+    margin-top: 20px;
+}
+
+.password-reset-content h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.password-reset-content p {
+    font-size: 16px;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* Responsive untuk tampilan mobile */
+@media (max-width: 480px) {
+    .service-container-password {
+        padding: 30px 20px;
+    }
+
+    .password-reset-content h1 {
+        font-size: 24px;
+    }
+
+    .password-reset-content p {
+        font-size: 14px;
+    }
+}
