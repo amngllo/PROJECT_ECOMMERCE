@@ -24,7 +24,7 @@ Nama Anggota:
 4. membuat superuser dan mengakses panel Admin
 ![img](SS%20ECOMEERCE/4.png)
 
-5. Untuk menampilkan model-model yang yang buat di Django Admin selanjutnya membuat admin.py setelah berhasil membuat admin.py berikut tampilan Django admin
+5. Untuk menampilkan model-model yang dibuat di Django Admin selanjutnya membuat admin.py setelah berhasil membuat admin.py berikut tampilan Django admin
 ![img](SS%20ECOMEERCE/5.png)
 
 ![img](SS%20ECOMEERCE/6.png)
@@ -52,5 +52,5 @@ Nama Anggota:
    ![img](SS%20ECOMEERCE/13.png)
    ![img](SS%20ECOMEERCE/14.png)
 
-10. Halamana untuk menampilkan produk yang telah ditambahkan
+10. Halaman untuk menampilkan produk yang telah ditambahkan
      ![img](SS%20ECOMEERCE/15.png)
