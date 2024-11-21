@@ -38,3 +38,18 @@ Nama Anggota:
 
 7. reset passwod
 ![img](SS%20ECOMEERCE/9.png)
+
+-Verifikasi Email
+![img](SS%20ECOMEERCE/10.png)
+
+-Reset Password
+![img](SS%20ECOMEERCE/11.png)
+
+8. Tampilan Setelah berhasil membuat model for sales di Django admin yang meliputi katalog, kategori,order item, orders, produk dan reviews.
+   ![img](SS%20ECOMEERCE/12.png)
+- Halaman untuk menambahkan product di dalam panel admin django
+   ![img](SS%20ECOMEERCE/13.png)
+   ![img](SS%20ECOMEERCE/14.png)
+
+9. Halamana untuk menampilkan produk yang telah ditambahkan
+     ![img](SS%20ECOMEERCE/15.png)
