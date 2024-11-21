@@ -24,7 +24,7 @@ Nama Anggota:
 4. membuat superuser dan mengakses panel Admin
 ![img](SS%20ECOMEERCE/4.png)
 
-5. Untuk menampilkan model-model yang yang buat di Django Admin selanjutnya membuat admin.py setelah berhasil membuat admin.py berikut tampilan Django admin
+5. Untuk menampilkan model-model yang dibuat di Django Admin selanjutnya membuat admin.py, setelah berhasil membuat admin.py berikut tampilan Django admin
 ![img](SS%20ECOMEERCE/5.png)
 
 ![img](SS%20ECOMEERCE/6.png)
@@ -38,3 +38,24 @@ Nama Anggota:
 
 7. reset passwod
 ![img](SS%20ECOMEERCE/9.png)
+
+-Verifikasi Email
+![img](SS%20ECOMEERCE/10.png)
+
+-Reset Password
+![img](SS%20ECOMEERCE/11.png)
+
+8. Tampilan Setelah berhasil membuat model for sales di Django admin yang meliputi katalog, kategori,order item, orders, produk dan reviews.
+   ![img](SS%20ECOMEERCE/12.png)
+   
+- Halaman untuk menambahkan deskripsi produk yang akan dijual
+   ![img](SS%20ECOMEERCE/13.png)
+   ![img](SS%20ECOMEERCE/14.png)
+
+9. Tampilan website Ecommerce
+     ![img](SS%20ECOMEERCE/15.png)
+
+
+
+
+
